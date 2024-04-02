@@ -59,8 +59,8 @@ class Screen():
     def addButtons(self,b):
         for button in b:
             self.addButton(button)
-    def play(self):
-        pass
+    
+    
 
 class Image():
     def __init__(self, image, name, size, pos = (0,0)):
@@ -97,9 +97,7 @@ class Button():
     def __init__(self, size, color, title, pos=(0,0)):
         self.width,self.length = size
         self.x,self.y = pos
-        self.baseColor = color
-        self.color = self.baseColor
-        self.clickedColor = BLACK
+        self.color = color
         self.clicked = False
         self.title = title
         self.rect = pygame.Rect(self.x, self.y, self.width, self.length)
@@ -110,11 +108,6 @@ class Button():
             self.clicked = False
         return self.clicked
     def draw(self,screen):
-        if self.clicked:
-            self.color = self.clickedColor
-        else:
-            self.color = self.baseColor
-        
         pygame.draw.rect(screen,self.color, self.rect)
         pygame.draw.line(screen, BLACK, (self.x, self.y), (self.x+self.width, self.y ), 1)
         pygame.draw.line(screen, BLACK, (self.x, self.y), (self.x, self.y+self.length ), 1)
