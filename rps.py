@@ -11,13 +11,13 @@ choices = ["rock", "paper", "scissors"]
 def get_game_object(choice):
   """Loads an image based on the game object."""
   if choice == "rock":
-    return pygame.image.load("rock.png")
+    return pygame.image.load("images/rock.png")
   elif choice == "paper":
-    return pygame.image.load("paper.png")
+    return pygame.image.load("images/paper.png")
   elif choice == "scissors":
-    return pygame.image.load("scissors.png")
+    return pygame.image.load("images/scissors.png")
   else:
-     return pygame.image.load("rps.png")
+     return pygame.image.load("images/rps.png")
 
 
 

@@ -10,9 +10,9 @@ PENNY_HEIGHT = 100
 # Function to load image based on side (Heads or Tails)
 def load_penny_image(side):
     if side == "heads":
-        return pygame.image.load("heads.png")
+        return pygame.image.load("images/heads.png")
     else:
-        return pygame.image.load("tails.png")
+        return pygame.image.load("images/tails.png")
 
 
 
@@ -92,7 +92,7 @@ heads = fr.ImageButton(load_penny_image("heads"), "headsImg",(150,150))
 heads.setPos((fr.GRID_WIDTH-heads.size[0]*2-50*1)/2, fr.GRID_HEIGHT/5)
 
 #create computer image
-computer_img = fr.Image(pygame.image.load('both.png'),"computerImg",(300,150))
+computer_img = fr.Image(pygame.image.load('images/both.png'),"computerImg",(300,150))
 computer_img.setPos((fr.GRID_WIDTH-computer_img.size[0])/2,fr.GRID_HEIGHT/5*3)
 
 #Create Tails Image
